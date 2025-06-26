@@ -10,7 +10,7 @@
 -- Step 1
 DECLARE @conversion_rate FLOAT = 0.02;		 -- Conversion rate is 2%
 DECLARE @product_cost MONEY = 5.0;			 -- Product cost is £5
-DECLARE @campaign_cost MONEY = 50000.0;		 -- Campaign cost is £50000
+DECLARE @campaign_cost MONEY = 130000.0;		 -- Campaign cost is £50000
 
 
 -- Step 2
@@ -31,8 +31,8 @@ SELECT TOP 3
 	channel_name,
 	rounded_avg_views_per_video,
 	(rounded_avg_views_per_video * @conversion_rate) AS pot_products_sold_per_video,
-	(rounded_avg_views_per_video * @product_cost) AS pot_revenue_per_video,
-	(rounded_avg_views_per_video * @product_cost - @campaign_cost) AS net_profit
+	(rounded_avg_views_per_video * @conversion_rate * @product_cost) AS pot_revenue_per_video,
+	(rounded_avg_views_per_video * @conversion_rate * @product_cost - @campaign_cost) AS net_profit
 FROM 
 	ChannelInfo
 ORDER BY 
