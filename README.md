@@ -116,31 +116,40 @@ To determine the dashboard's content, we first identify the key business questio
 ## End-to-End Approach
 
 1. Data Collection
-  Acquire relevant YouTube channel data, focusing on UK-based creators and key performance metrics.
 
-2. Initial Exploration
-  Conduct a preliminary review and analysis of the raw data in Excel to identify structure, completeness, and potential anomalies.
+	Acquire relevant YouTube channel data, focusing on UK-based creators and key performance metrics.
 
-3. Data Loading
-  Import the dataset into SQL Server to enable structured querying and efficient data handling.
+3. Initial Exploration
 
-4. Data Cleaning
-  Use SQL to clean and transform the data, handling missing values, correcting inconsistencies, and preparing it for analysis.
+	Conduct a preliminary review and analysis of the raw data in Excel to identify structure, completeness, and potential anomalies.
 
-5. Data Testing
-  Validate data accuracy and consistency through SQL-based testing and integrity checks.
+4. Data Loading
 
-6. Data Visualisation
-  Connect SQL Server to Power BI to build an interactive dashboard showcasing metrics like subscriber count, total views, video volume, and engagement.
+	Import the dataset into SQL Server to enable structured querying and efficient data handling.
 
-7. Insight Generation
-  Analyse trends and relationships within the visualised data to derive actionable insights for marketing decision-making.
+5. Data Cleaning
 
-8. Documentation & Commentary
-  Document the process, methods, and key findings, including explanations for insights and any assumptions made.
+	Use SQL to clean and transform the data, handling missing values, correcting inconsistencies, and preparing it for analysis.
 
-9. Publishing
-  Publish the final dashboard and supporting documentation to GitHub Pages for easy access and sharing.
+6. Data Testing
+
+	Validate data accuracy and consistency through SQL-based testing and integrity checks.
+
+7. Data Visualisation
+
+	Connect SQL Server to Power BI to build an interactive dashboard showcasing metrics like subscriber count, total views, video volume, and engagement.
+
+8. Insight Generation
+
+	Analyse trends and relationships within the visualised data to derive actionable insights for marketing decision-making.
+
+9. Documentation & Commentary
+
+	Document the process, methods, and key findings, including explanations for insights and any assumptions made.
+
+10. Publishing
+
+	Publish the final dashboard and supporting documentation to GitHub Pages for easy access and sharing.
 
 
 ## Data Exploration
@@ -148,28 +157,35 @@ To determine the dashboard's content, we first identify the key business questio
 A preliminary review of the dataset revealed the following key points:
 
 1. Sufficient Core Metrics
-The dataset includes at least four essential columns: subscriber count, total views, number of videos, and engagement-related data. These cover all core metrics required for our analysis, meaning no further data collection from the client is necessary at this stage.
+
+	The dataset includes at least four essential columns: subscriber count, total views, number of videos, and engagement-related data. These cover all core metrics required for our analysis, meaning no further data collection from the client is necessary at this stage.
 
 2. Channel Identification Format
-The first column appears to contain YouTube channel identifiers in a format that includes the @ symbol, likely representing channel handles. For clarity and usability, we’ll extract and clean these to display proper channel names throughout the analysis.
+
+	The first column appears to contain YouTube channel identifiers in a format that includes the @ symbol, likely representing channel handles. For clarity and usability, we’ll extract and clean these to display proper channel names throughout the analysis.
 
 3. Language Inconsistencies
-Some column headers and cell values are in a language other than English. We'll assess whether these fields are relevant. If they are, translation or standardisation will be required; otherwise, they’ll be excluded from the analysis.
+
+	Some column headers and cell values are in a language other than English. We'll assess whether these fields are relevant. If they are, translation or standardisation will be required; otherwise, they’ll be excluded from the analysis.
 
 4. Unnecessary Columns
-The dataset contains more fields than needed for our specific objectives. To improve clarity and focus, non-essential columns will be removed during the data cleaning process, allowing us to streamline both analysis and visualisation.
+
+	The dataset contains more fields than needed for our specific objectives. To improve clarity and focus, non-essential columns will be removed during the data cleaning process, allowing us to streamline both analysis and visualisation.
 
 
 ## Data Cleaning 
 The goal of the cleaning phase is to ensure the dataset is structured, consistent, and fully ready for analysis. To achieve this, the cleaned dataset should meet the following criteria and constraints:
 1. Relevant Fields Only
-Retain only the columns essential to the analysis, such as channel name, subscriber count, total views, video count, and engagement metrics.
+
+	Retain only the columns essential to the analysis, such as channel name, subscriber count, total views, video count, and engagement metrics.
 
 2. Correct Data Types
-Ensure that each column has an appropriate data type (e.g., integers for numerical metrics, strings for text fields) to support accurate filtering, aggregation, and visualisation.
+
+	Ensure that each column has an appropriate data type (e.g., integers for numerical metrics, strings for text fields) to support accurate filtering, aggregation, and visualisation.
 
 3. No Missing Values
-All rows should contain complete data across the retained columns. There should be no null or blank values to ensure the reliability of any derived insights.
+
+	All rows should contain complete data across the retained columns. There should be no null or blank values to ensure the reliability of any derived insights.
 
 
 Below is a table outlining the constraints on our cleaned dataset:
@@ -575,13 +591,16 @@ ORDER BY
 ## Summary
 
 1. Top UK YouTubers by Subscribers
-NoCopyrightSounds, Dan Rhodes, and DanTDM lead the UK in subscriber count.
+
+	NoCopyrightSounds, Dan Rhodes, and DanTDM lead the UK in subscriber count.
 
 2. Top UK YouTubers by Views
-Disney Kids, DanTDM, and Dan Rhodes Max have the highest total views.
+
+	Disney Kids, DanTDM, and Dan Rhodes Max have the highest total views.
 
 3. Channel Type Insights
-Entertainment and music-focused channels dominate engagement and reach. These creators publish consistently and maintain high levels of audience interaction, making them ideal for broad marketing campaigns.
+
+	Entertainment and music-focused channels dominate engagement and reach. These creators publish consistently and maintain high levels of audience interaction, making them ideal for broad marketing campaigns.
 
 
 
@@ -596,7 +615,7 @@ Entertainment and music-focused channels dominate engagement and reach. These cr
 - DanTDM
 - Dan Rhodes
 
-4. Disney Kids can be used for promotion of any Kids specific products.
+4. Disney Kids can be used for the promotion of any kids-specific products.
 
 ### Potential ROI 
 1. Dan Rhodes collaboration: Estimated net profit: £1,085,000 per video
@@ -614,16 +633,17 @@ We recommend pursuing a long-term influencer partnership with Dan Rhodes, given 
 After confirming this strategy aligns with the client’s expectations, we can look to expand collaborations with DanTDM and NoCopyrightSounds based on campaign results and performance tracking.   
 
 1. Initiate Contact
-Reach out to Dan Rhodes’ team first to explore partnership opportunities.
+
+	Reach out to Dan Rhodes’ team first to explore partnership opportunities.
 
 2. Negotiate Terms
-Align collaboration agreements with campaign budgets and expected deliverables.
+
+	Align collaboration agreements with campaign budgets and expected deliverables.
 
 3. Launch Campaigns
-Begin with the agreed influencer content, tracking performance through defined KPIs.
+
+	Begin with the agreed influencer content, tracking performance through defined KPIs.
 
 4. Review and Optimise
-Evaluate each campaign’s performance, collect feedback from target audiences, and refine the strategy for future partnerships.
 
-
-
+	Evaluate each campaign’s performance, collect feedback from target audiences, and refine the strategy for future partnerships.
