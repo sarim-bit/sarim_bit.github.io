@@ -51,6 +51,37 @@ To support the analysis, we require data on the top UK-based YouTubers, specific
 
 The dataset is sourced from Kaggle. It includes information on the top 100 social media influencers by country for 2024. [Kaggle](https://www.kaggle.com/datasets/bhavyadhingra00020/top-100-social-media-influencers-2024-countrywise?resource=download)
 
+## Getting latest data
+
+To get the latest YouTuber statistics, use YouTube's API. The YouTube API requires the channel ID.
+
+### Steps
+
+1. Extract channel id from the Kaggle dataset. 
+2. Create Python script, [uk_youtubers_latest_stats.py](assets/scripts/python/uk_youtubers_latest_stats.py), to get the relevant data from the API.
+
+Code Snippet to get Channel data
+```python
+def get_channel_stats(youtube, channel_id):
+    request = youtube.channels().list(
+        part='snippet,statistics',
+        id=channel_id
+    )
+    response = request.execute()
+    if 'items' in response and response['items']:
+        data = dict(
+            channel_name=response['items'][0]['snippet']['title'],
+            total_subscribers=response['items'][0]['statistics']['subscriberCount'],
+            total_views=response['items'][0]['statistics']['viewCount'],
+            total_videos=response['items'][0]['statistics']['videoCount'],
+        )
+        return data
+    else:
+        print("No 'items' found in response. Possibly invalid channel ID or restricted key.")
+        return None
+```
+3. Store all the information in a new csv file [top_uk_youtubers.csv](assets/data/top_uk_youtubers.csv).
+
 # Stages
 
 - Design
@@ -139,6 +170,7 @@ Ensure that each column has an appropriate data type (e.g., integers for numeric
 
 3. No Missing Values
 All rows should contain complete data across the retained columns. There should be no null or blank values to ensure the reliability of any derived insights.
+
 
 Below is a table outlining the constraints on our cleaned dataset:
 
@@ -247,8 +279,6 @@ FROM
 
 ![GIF of Power BI Dashboard](assets/images/Dashboard.gif)
 
-
-
 ## DAX Measures
 
 ### 1. Total Subscribers
@@ -279,7 +309,6 @@ DIVIDE(
 
 ```
 
-
 ### 4. Subscriber Engagement Rate
 ```
 Subscriber Engagement = 
@@ -290,7 +319,6 @@ DIVIDE(
 
 ```
 
-
 ### 5. Views per subscriber
 ```
 Views per Subscriber = 
@@ -300,9 +328,6 @@ DIVIDE(
 )
 
 ```
-
-
-
 
 # Analysis 
 
@@ -315,16 +340,16 @@ To provide targeted insights for our marketing client, we will concentrate on an
 
 | Rank | Channel Name         | Subscribers (Million) |
 |------|----------------------|-----------------|
-| 1    | NoCopyrightSounds    | 33.60           |
-| 2    | DanTDM               | 28.60           |
-| 3    | Dan Rhodes           | 26.50           |
-| 4    | Miss Katy            | 24.50           |
-| 5    | Mister Max           | 24.40           |
-| 6    | KSI                  | 24.10           |
-| 7    | Jelly                | 23.50           |
-| 8    | Dua Lipa             | 23.30           |
-| 9    | Sidemen              | 21.00           |
-| 10   | Ali-A                | 18.90           |
+| 1    | NoCopyrightSounds    | 34.10           |
+| 2    | DanTDM               | 29.20           |
+| 3    | Dan Rhodes           | 26.70           |
+| 4    | Miss Katy            | 25.40           |
+| 5    | KSI Music            | 25.00           |
+| 6    | Mister Max           | 25.00           |
+| 7    | Dua Lipa             | 24.30           |
+| 8    | Jelly                | 23.50           |
+| 9    | Sidemen              | 22.40           |
+| 10   | Mrwhosetheboss       | 21.10           |
 
 
 
@@ -333,27 +358,27 @@ To provide targeted insights for our marketing client, we will concentrate on an
 
 | Rank | Channel Name | Total Views (Billion) |
 |------|--------------|-----------------|
-| 1    | DanTDM       | 19.78           |
-| 2    | Dan Rhodes   | 18.56           |
-| 3    | Mister Max   | 15.97           |
+| 1    | Disney Kids  | 22.08           |
+| 2    | DanTDM   	  | 20.20           |
+| 3    | Dan Rhodes   | 19.20           |
 
 
 ### 3. Which 3 channels have the highest average views per video?
 
-| Channel Name | Average Views per Video (Million) |
-|--------------|-----------------|
-| Mark Ronson  | 32.27           |
-| Jessie J     | 5.97            |
-| Dua Lipa     | 5.76            |
+| Rank | Channel Name | Average Views per Video (Million) |
+|------|--------------|-----------------|
+| 1    | Mark Ronson  | 353.89          |
+| 2    | Dua Lipa     | 46.77           |
+| 3    | Jessie J     | 34.38           |
 
 
 ### 4. Which 3 channels have the highest views per subscriber ratio?
 
 | Rank | Channel Name       | Views per Subscriber        |
 |------|-----------------   |---------------------------- |
-| 1    | GRM Daily          | 1185.79                     |
-| 2    | Nickelodeon        | 1061.04                     |
-| 3    | Disney Junior UK   | 1031.97                     |
+| 1    | Disney Kids        | 1623.74                     |
+| 2    | Disney Club UK     | 1053.68                     |
+| 3    | Woody & Kleiny     | 979.81                      |
 
 
 
@@ -361,9 +386,10 @@ To provide targeted insights for our marketing client, we will concentrate on an
 
 | Rank | Channel Name    | Subscriber Engagement Rate  |
 |------|-----------------|---------------------------- |
-| 1    | Mark Ronson     | 343,000                     |
-| 2    | Jessie J        | 110,416.67                  |
-| 3    | Dua Lipa        | 104,954.95                  |
+| 1    | Mark Ronson     | 355,500                     |
+| 2    | Dua Lipa        | 77,388.54                   |
+| 3    | Jessie J        | 60,335.20                   |
+
 
 
 
@@ -379,30 +405,30 @@ To provide targeted insights for our marketing client, we will concentrate on an
 - Conversion rate is assumed to be 2%
   
 1. NoCopyrightSounds 
-- Average views per video = 6.92 million
+- Average views per video = 6 million
 - Product cost = £5
-- Potential units sold per video = 6.92 million x 2% conversion rate = 138,400 units sold
-- Potential revenue per video = 138,400 x £5 = £692,000
+- Potential units sold per video = 6 million x 2% conversion rate = 120,000 units sold
+- Potential revenue per video = 120,000 x £5 = £600,000
 - Campaign cost (one-time fee) = £50,000
-- **Net profit = £692,000 - £50,000 = £642,000**
+- **Net profit = £600,000 - £50,000 = £550,000**
 
 b. DanTDM
 
-- Average views per video = 5.34 million
+- Average views per video = 5.36 million
 - Product cost = £5
-- Potential units sold per video = 5.34 million x 2% conversion rate = 106,800 units sold
-- Potential revenue per video = 106,800 x £5 = £534,000
+- Potential units sold per video = 5.36 million x 2% conversion rate = 107,200 units sold
+- Potential revenue per video = 107,200 x £5 = £536,000
 - Campaign cost (one-time fee) = £50,000
-- **Net profit = £534,000 - £50,000 = £484,000**
+- **Net profit = £536,000 - £50,000 = £486,000**
 
 c. Dan Rhodes
 
-- Average views per video = 11.15 million
+- Average views per video = 11.35 million
 - Product cost = £5
-- Potential units sold per video = 11.15 million x 2% conversion rate = 223,000 units sold
-- Potential revenue per video = 223,000 x £5 = £1,115,000
+- Potential units sold per video = 11.35 million x 2% conversion rate = 227,000 units sold
+- Potential revenue per video = 227,000 x £5 = £1,135,000
 - Campaign cost (one-time fee) = £50,000
-- **Net profit = £1,115,000 - £50,000 = £1,065,000**
+- **Net profit = £1,135,000 - £50,000 = £1,085,000**
 
 
 Best option from category: Dan Rhodes
@@ -444,8 +470,8 @@ SELECT TOP 3
 	channel_name,
 	rounded_avg_views_per_video,
 	(rounded_avg_views_per_video * @conversion_rate) AS pot_products_sold_per_video,
-	(rounded_avg_views_per_video * @product_cost) AS pot_revenue_per_video,
-	(rounded_avg_views_per_video * @product_cost - @campaign_cost) AS net_profit
+	(rounded_avg_views_per_video * @conversion_rate * @product_cost) AS pot_revenue_per_video,
+	(rounded_avg_views_per_video * @conversion_rate * @product_cost - @campaign_cost) AS net_profit
 FROM 
 	ChannelInfo
 ORDER BY 
@@ -465,34 +491,35 @@ ORDER BY
 - Campaign cost is assumed to be £130,000
 - Conversion rate is assumed to be 2%
 
-a. DanTDM
+a. Disney Kids
 
-- Average views per video = 5.34 million
+- Average views per video = 4.6 million
 - Product cost = £5
-- Potential units sold per video = 5.34 million x 2% conversion rate = 106,800 units sold
-- Potential revenue per video = 106,800 x £5 = £534,000
+- Potential units sold per video = 4.6 million x 2% conversion rate = 92,000 units sold
+- Potential revenue per video = 92,000 x £5 = £460,000
 - Campaign cost (3-month contract) = £130,000
-- **Net profit = £534,000 - £130,000 = £404,000**
+- **Net profit = £460,000 - £130,000 = £330,000**
 
-b. Dan Rhodes
+b. DanTDM
 
-- Average views per video = 11.15 million
+- Average views per video = 5.36 million
 - Product cost = £5
-- Potential units sold per video = 11.15 million x 2% conversion rate = 223,000 units sold
-- Potential revenue per video = 223,000 x £5 = £1,115,000
+- Potential units sold per video = 5.36 million x 2% conversion rate = 107,200 units sold
+- Potential revenue per video = 107,200 x £5 = £536,000
 - Campaign cost (3-month contract) = £130,000
-- **Net profit = £1,115,000 - £130,000 = £985,000**
+- **Net profit = £536,000 - £130,000 = £406,000**
 
-c. Mister Max
+c. Dan Rhodes
 
-- Average views per video = 14.06 million
+- Average views per video = 11.35 million
 - Product cost = £5
-- Potential units sold per video = 14.06 million x 2% conversion rate = 281,200 units sold
-- Potential revenue per video = 281,200 x £5 = £1,406,000
+- Potential units sold per video = 11.35 million x 2% conversion rate = 227,000 units sold
+- Potential revenue per video = 227,000 x £5 = £1,135,000
 - Campaign cost (3-month contract) = £130,000
-- **Net profit = £1,406,000 - £130,000 = £1,276,000**
+- **Net profit = £1,135,000 - £130,000 = £1,085,000**
 
-Best option from category: Mister Max
+
+Best option from category: Dan Rhodes
 
 
 
@@ -531,8 +558,8 @@ SELECT TOP 3
 	channel_name,
 	rounded_avg_views_per_video,
 	(rounded_avg_views_per_video * @conversion_rate) AS pot_products_sold_per_video,
-	(rounded_avg_views_per_video * @product_cost) AS pot_revenue_per_video,
-	(rounded_avg_views_per_video * @product_cost - @campaign_cost) AS net_profit
+	(rounded_avg_views_per_video * @conversion_rate * @product_cost) AS pot_revenue_per_video,
+	(rounded_avg_views_per_video * @conversion_rate * @product_cost - @campaign_cost) AS net_profit
 FROM 
 	ChannelInfo
 ORDER BY 
@@ -551,7 +578,7 @@ ORDER BY
 NoCopyrightSounds, Dan Rhodes, and DanTDM lead the UK in subscriber count.
 
 2. Top UK YouTubers by Views
-DanTDM, Dan Rhodes, and Mister Max have the highest total views.
+Disney Kids, DanTDM, and Dan Rhodes Max have the highest total views.
 
 3. Channel Type Insights
 Entertainment and music-focused channels dominate engagement and reach. These creators publish consistently and maintain high levels of audience interaction, making them ideal for broad marketing campaigns.
@@ -562,29 +589,29 @@ Entertainment and music-focused channels dominate engagement and reach. These cr
 
 1. Dan Rhodes is the strongest candidate for collaboration if the goal is to maximise visibility. He currently has the highest subscriber count among UK YouTubers.
 
-2. Mister Max offers excellent reach potential. However, for longer-term impact, DanTDM and Dan Rhodes may be better partners due to their large subscriber bases and strong average view counts.
+2. For longer-term impact, DanTDM and Dan Rhodes are great partners due to their large subscriber bases and strong average view counts.
 
 3. Based on consistent engagement and overall performance, the top three channels to partner with are:
 - NoCopyrightSounds
 - DanTDM
 - Dan Rhodes
 
+4. Disney Kids can be used for promotion of any Kids specific products.
+
 ### Potential ROI 
-1. Dan Rhodes collaboration: Estimated net profit: £1,065,000 per video
+1. Dan Rhodes collaboration: Estimated net profit: £1,085,000 per video
 
-2. Mister Max influencer campaign: Estimated net profit: £1,276,000
+2. DanTDM
+- Product placement campaign: £486,000 per video
+- Influencer partnership deal: £406,000 net profit (one-off)
 
-3. DanTDM
-- Product placement campaign: £484,000 per video
-- Influencer partnership deal: £404,000 net profit (one-off)
-
-4. NoCopyrightSounds collaboration: Estimated profit: £642,000 per video 
+3. NoCopyrightSounds collaboration: Estimated profit: £550,000 per video 
 
 
 ### Action plan
 We recommend pursuing a long-term influencer partnership with Dan Rhodes, given his extensive reach, consistent engagement, and high ROI potential.
 
-After confirming this strategy aligns with the client’s expectations, we can look to expand collaborations with DanTDM, Mister Max, and NoCopyrightSounds based on campaign results and performance tracking.   
+After confirming this strategy aligns with the client’s expectations, we can look to expand collaborations with DanTDM and NoCopyrightSounds based on campaign results and performance tracking.   
 
 1. Initiate Contact
 Reach out to Dan Rhodes’ team first to explore partnership opportunities.
