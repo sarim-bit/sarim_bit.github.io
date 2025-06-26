@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Top_UK_Youtubers"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f590cc3c-d8cc-4472-b9fb-f39fef32feb5"
+  }
+}

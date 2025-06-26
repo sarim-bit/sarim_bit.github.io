@@ -1,0 +1,935 @@
+cultureInfo en-GB
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "view_uk_youtuber": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "view_uk_youtubers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "view uk youtuber": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "view_uk_youtubers": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber.channel_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "view_uk_youtubers",
+			          "ConceptualProperty": "channel_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "channel name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "channel_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "channel": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "channel nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "channel title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "channel label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "channel tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "network": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "conduit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "waterway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "canal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "YouTube Channel": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "YouTuber": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber.subscriber_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "view_uk_youtubers",
+			          "ConceptualProperty": "subscriber_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "subscriber count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "subscriber_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "subscriber amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber.view_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "view_uk_youtubers",
+			          "ConceptualProperty": "view_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "view count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "view_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "view amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber.video_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "view_uk_youtubers",
+			          "ConceptualProperty": "video_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "video count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "video_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "video amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber.total_subscribers_million": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "view_uk_youtubers",
+			          "ConceptualProperty": "Total Subscribers (Million)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total subscribers (million)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total subscribers": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "aggregate subscriber (million)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "overall subscriber (million)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber.total_views_billion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "view_uk_youtubers",
+			          "ConceptualProperty": "Total Views (Billion)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total views (billion)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total views": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "aggregate view (billion)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "overall view (billion)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber.subscriber_engagement": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "view_uk_youtubers",
+			          "ConceptualProperty": "Subscriber Engagement"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "subscriber engagement": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "engagement": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "subscriber appointment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "subscriber assignation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "subscriber commitment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "subscriber arrangement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "appointment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "assignation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "commitment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "arrangement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "subscriber meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "subscriber rendezvous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber.views_per_subscriber": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "view_uk_youtubers",
+			          "ConceptualProperty": "Views per Subscriber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "views per subscriber": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "views": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "opinion per subscriber": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "interpretation per subscriber": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "assessment per subscriber": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "understanding per subscriber": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "opinion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "outlook per subscriber": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "observation per subscriber": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "examination per subscriber": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber.average_views_per_video_million": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "view_uk_youtubers",
+			          "ConceptualProperty": "Average Views per Video (Million)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "average views per video (million)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "average views per video": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "view_uk_youtuber_has_average_views_per_video_million": {
+			      "Binding": {
+			        "ConceptualEntity": "view_uk_youtubers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "view_uk_youtuber": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber"
+			          }
+			        },
+			        "view_uk_youtuber.average_views_per_video_million": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber.average_views_per_video_million"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "view_uk_youtuber"
+			            },
+			            "Object": {
+			              "Role": "view_uk_youtuber.average_views_per_video_million"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "view_uk_youtubers_have_average_views_per_video_million"
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber_has_views_per_subscriber": {
+			      "Binding": {
+			        "ConceptualEntity": "view_uk_youtubers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "view_uk_youtuber": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber"
+			          }
+			        },
+			        "view_uk_youtuber.views_per_subscriber": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber.views_per_subscriber"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "view_uk_youtuber"
+			            },
+			            "Object": {
+			              "Role": "view_uk_youtuber.views_per_subscriber"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "view_uk_youtubers_have_views_per_subscriber"
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber_has_subscriber_engagement": {
+			      "Binding": {
+			        "ConceptualEntity": "view_uk_youtubers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "view_uk_youtuber": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber"
+			          }
+			        },
+			        "view_uk_youtuber.subscriber_engagement": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber.subscriber_engagement"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "view_uk_youtuber"
+			            },
+			            "Object": {
+			              "Role": "view_uk_youtuber.subscriber_engagement"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "view_uk_youtubers_have_subscriber_engagement"
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber_has_total_views_billion": {
+			      "Binding": {
+			        "ConceptualEntity": "view_uk_youtubers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "view_uk_youtuber": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber"
+			          }
+			        },
+			        "view_uk_youtuber.total_views_billion": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber.total_views_billion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "view_uk_youtuber"
+			            },
+			            "Object": {
+			              "Role": "view_uk_youtuber.total_views_billion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "view_uk_youtubers_have_total_views_billion"
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber_has_total_subscribers_million": {
+			      "Binding": {
+			        "ConceptualEntity": "view_uk_youtubers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "view_uk_youtuber": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber"
+			          }
+			        },
+			        "view_uk_youtuber.total_subscribers_million": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber.total_subscribers_million"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "view_uk_youtuber"
+			            },
+			            "Object": {
+			              "Role": "view_uk_youtuber.total_subscribers_million"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "view_uk_youtubers_have_total_subscribers_million"
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber_has_video_count": {
+			      "Binding": {
+			        "ConceptualEntity": "view_uk_youtubers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "view_uk_youtuber": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber"
+			          }
+			        },
+			        "view_uk_youtuber.video_count": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber.video_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "view_uk_youtuber"
+			            },
+			            "Object": {
+			              "Role": "view_uk_youtuber.video_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "view_uk_youtubers_have_video_counts"
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber_has_view_count": {
+			      "Binding": {
+			        "ConceptualEntity": "view_uk_youtubers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "view_uk_youtuber": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber"
+			          }
+			        },
+			        "view_uk_youtuber.view_count": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber.view_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "view_uk_youtuber"
+			            },
+			            "Object": {
+			              "Role": "view_uk_youtuber.view_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "view_uk_youtubers_have_view_counts"
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber_has_subscriber_count": {
+			      "Binding": {
+			        "ConceptualEntity": "view_uk_youtubers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "view_uk_youtuber": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber"
+			          }
+			        },
+			        "view_uk_youtuber.subscriber_count": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber.subscriber_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "view_uk_youtuber"
+			            },
+			            "Object": {
+			              "Role": "view_uk_youtuber.subscriber_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "view_uk_youtubers_have_subscriber_counts"
+			        }
+			      ]
+			    },
+			    "view_uk_youtuber_has_channel_name": {
+			      "Binding": {
+			        "ConceptualEntity": "view_uk_youtubers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "view_uk_youtuber": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber"
+			          }
+			        },
+			        "view_uk_youtuber.channel_name": {
+			          "Target": {
+			            "Entity": "view_uk_youtuber.channel_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "view_uk_youtuber"
+			            },
+			            "Object": {
+			              "Role": "view_uk_youtuber.channel_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "view_uk_youtubers_have_channel_names"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+
